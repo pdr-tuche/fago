@@ -1,0 +1,156 @@
+
+body{
+  background-color:white;
+}
+
+header{
+  background-color: lightgray;
+}
+p{
+  font-family: 'Montserrat', sans-serif;
+}
+.content p{
+  font-family: 'Big Shoulders Inline Text', cursive;
+}
+header{
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-areas:
+  "sidebar main aside"
+}
+
+.cabeçalho{
+  display:block;
+  grid-area: main;
+  text-align: center;
+  height: 100px;
+}
+.cabeçalho h1{
+  font-family: 'Fira Sans', sans-serif;
+}
+
+#Perfil{
+  grid-area: Perfil;
+}
+
+#Status{
+  grid-area: Status;
+}
+
+#Grupos{
+  grid-area: Grupos;
+}
+
+#Buscar{
+  grid-area: Buscar;
+}
+
+.links{
+  display: grid;
+  grid-template-areas: "Perfil Status Grupos Buscar";
+  justify-content: space-evenly;
+  text-align: center;
+  margin:5px;
+  padding: 5px;
+}
+
+.links a:hover{
+  cursor:pointer;
+}
+
+
+
+
+/*@media all and (max-width:320px){
+  .links{
+    grid-template-areas: "Perfil Status" "Grupos Buscar";
+    font-size: 4rem;
+  }
+  #abaixo{
+    height: 1000px;
+    font-size: 1rem;
+  }
+
+}*/
+
+@media all and (min-width:425px){
+  h1{
+    font-size: 3rem;
+  }
+  .container img{
+    width: 3rem;
+    height: 3rem;
+  }
+}
+
+@media all and (min-width:768px){
+  .links{
+    grid-template-areas: "Perfil Status" "Grupos Buscar";
+    font-size: 1rem;    
+  }
+  .container a{
+    margin:20px;
+  }
+}
+
+@media all and (min-width:1024px){
+  h1{
+    font-size:2rem;
+  }
+  .links{
+    grid-template-areas: "Perfil Status Grupos Buscar";
+    font-size: 1rem;
+  }
+  .content{
+    height: 400px;
+  }
+  #abaixo{
+    height: 430px;
+  }
+  .container img{
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+
+
+#abaixo{
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-areas:
+  "sidebar main aside"
+}
+#abaixo div{
+  padding: 7px;
+}
+.left-side{
+  grid-area: sidebar;
+}
+
+.content{
+  background-color: white;
+  border-right: solid black;
+  border-left: solid black;
+  border-bottom: solid black;
+  /*height: 400px;*/
+  overflow-y: scroll;
+  grid-area: main;
+  text-align: center;
+}
+
+.right-side{
+  grid-area: aside;
+}
+
+footer{
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-areas:
+  "sidebar main aside";
+  text-align: center;
+}
+
+#footer-wb{
+  background-image: linear-gradient();
+}

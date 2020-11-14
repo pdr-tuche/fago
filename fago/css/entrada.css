@@ -1,0 +1,56 @@
+body{
+    background-color: white;
+}
+p{
+    font-family: 'Montserrat', sans-serif;
+}
+#janela_login{
+    display: grid;
+    align-items:center;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-columns: 400px;
+    height: 400px;
+    
+}
+
+#bloco{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-column: 2;
+    background-color:lightgray;
+    text-align: center;
+    border: solid black;
+    height: 130px;
+
+}
+
+.cabeçalho{
+    display:block;
+    grid-area: main;
+    text-align: center;
+    height: 100px;
+}
+.cabeçalho h1{
+    font-family: 'Fira Sans', sans-serif;
+}
+
+header{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-areas:
+    "sidebar main aside"
+}
+
+@media all and (min-width: 1024px){
+    #janela_login{
+        grid-template-columns: 1fr 2fr 1fr;
+    }
+}
+
+@media all and (max-width: 768px){
+    #janela_login{
+        grid-template-columns: 1fr 3fr 1fr;
+    }
+}
+
